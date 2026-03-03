@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohan Manjhi — Full Stack Engineer & Founder | Portfolio</title>
+  <meta name="description"
+    content="Mohan Manjhi — Full Stack Engineer, Founder of Vynorix Technologies & TokenCare. Building smart digital products with React, Next.js, PostgreSQL, AI/LLM. Microsoft Hackathon Regional Winner. 400+ DSA Problems.">
+  <meta name="keywords"
+    content="Mohan Manjhi, Full Stack Developer, React, Next.js, Vynorix, TokenCare, Portfolio, Hire Developer India">
+  <meta name="author" content="Mohan Manjhi">
+  <meta property="og:title" content="Mohan Manjhi — Full Stack Engineer & Founder">
+  <meta property="og:description"
+    content="Building products that simplify lives. Founder of Vynorix Technologies. 22 repos, 3+ shipped products, Microsoft Hackathon Regional Winner.">
+  <meta property="og:type" content="website">
+
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Detect theme before paint to avoid flash -->
+  <script>
+    (function () {
+      var saved = localStorage.getItem('portfolio-theme');
+      if (saved === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else if (saved === 'light') {
+        // default light, do nothing
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+</head>
+
+<body>
+  <div id="particles-js"></div>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">M<span class="dot">.</span>Manjhi</a>
+      <div class="nav-links" id="navLinks">
+        <a href="#about" data-nav>About</a>
+        <a href="#skills" data-nav>Skills</a>
+        <a href="#experience" data-nav>Experience</a>
+        <a href="#projects" data-nav>Projects</a>
+        <a href="#education" data-nav>Education</a>
+        <a href="#contact" data-nav>Contact</a>
+        <a href="Mohan_Manjhi_Resume.pdf" download class="nav-cta" id="navResumeBtn">
+          <i data-lucide="download" style="width:14px;height:14px"></i>Resume
+          <span class="badge" id="navCount">—</span>
+        </a>
+      </div>
+      <div class="nav-right">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i data-lucide="sun" class="icon-sun" style="width:18px;height:18px"></i>
+          <i data-lucide="moon" class="icon-moon" style="width:18px;height:18px"></i>
+        </button>
+        <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero section" id="hero">
+    <div class="hero-orb o1"></div>
+    <div class="hero-orb o2"></div>
+    <div class="hero-orb o3"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-status"><span class="dot"></span> Open to Opportunities</div>
+        <p class="hero-intro">Hey there 👋, I'm</p>
+        <h1 class="hero-name"><span class="gradient-text">Mohan Manjhi</span></h1>
+        <div class="hero-typed-wrap"><span id="typed-output"></span></div>
+        <p class="hero-desc">
+          I build <strong>smart digital products</strong> that simplify lives — from healthcare queue management to
+          AI-powered tools used by <strong>5,000+ users monthly</strong>. Founder of <strong>Vynorix
+            Technologies</strong>, shipping real products in India.
+        </p>
+        <div class="hero-btns">
+          <a href="Mohan_Manjhi_Resume.pdf" download class="btn-glow" id="heroResumeBtn">
+            <i data-lucide="download" style="width:18px;height:18px"></i> Download Resume
+          </a>
+          <a href="#projects" class="btn-outline">
+            <i data-lucide="folder-open" style="width:18px;height:18px"></i> Explore My Work
+          </a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://www.linkedin.com/in/mohan-manjhi/" target="_blank" rel="noopener" aria-label="LinkedIn"><i
+              data-lucide="linkedin" style="width:20px;height:20px"></i></a>
+          <a href="https://github.com/MohanManjhi" target="_blank" rel="noopener" aria-label="GitHub"><i
+              data-lucide="github" style="width:20px;height:20px"></i></a>
+          <a href="mailto:mohanmanjhi1315@gmail.com" aria-label="Email"><i data-lucide="mail"
+              style="width:20px;height:20px"></i></a>
+          <a href="https://vynorix.in/" target="_blank" rel="noopener" aria-label="Vynorix"><i data-lucide="globe"
+              style="width:20px;height:20px"></i></a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-avatar"><img src="assets/profile.png" alt="Mohan Manjhi" loading="eager"></div>
+        <a href="https://vynorix.in/" target="_blank" rel="noopener" class="hero-float f1">🚀 Founder — <span
+            style="color:var(--accent)">Vynorix</span></a>
+        <div class="hero-float f2">💻 400+ DSA Solved</div>
+        <div class="hero-float f3">🏆 Microsoft Hackathon Regional Winner</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-row reveal">
+        <div class="stat-item">
+          <div class="stat-val">4+</div>
+          <div class="stat-lbl">Products Shipped</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-val">5K+</div>
+          <div class="stat-lbl">Monthly Users</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-val">400+</div>
+          <div class="stat-lbl">DSA Problems Solved</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-val">200+</div>
+          <div class="stat-lbl">Online Tools Built</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">// about me</span>
+        <h2 class="section-title">The <span class="gradient-text">Story</span> Behind the Code</h2>
+        <p class="section-desc">From spotting real-world problems to shipping production-grade products</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal-left">
+          <h3>I build products people actually use ✨</h3>
+          <p>
+            I'm <strong>Mohan Manjhi</strong>, a Full Stack Engineer and <strong>Founder & CEO of Vynorix
+              Technologies</strong>. My journey started when I noticed patients waiting hours in crowded clinics with no
+            idea when their turn would come. That frustration sparked <strong>Token Care</strong> — a smart OPD queue
+            management system now bringing order to chaotic waiting rooms across India.
+          </p>
+          <p>
+            Beyond Token Care, I've built <strong>200+ free online tools</strong> on Ira Magic Tools, a
+            <strong>multilingual AI voice assistant</strong> for government schemes, and an <strong>AI-powered SQL
+              chatbot</strong>. I also won the <strong>Microsoft BhashaBandhu Regional Hackathon</strong> and have
+            solved
+            <strong>400+ DSA problems</strong> across platforms.
+          </p>
+          <p>
+            I thrive on the 0-to-1 journey — from architecting multi-tenant SaaS platforms to deploying production
+            systems on AWS. I don't just write code; I <strong>ship products that serve real users</strong>.
+          </p>
+          <div class="about-cards stagger">
+            <div class="about-card">
+              <div class="icon">🏢</div>
+              <h4>Founder & CEO</h4>
+              <p>Vynorix Technologies</p>
+            </div>
+            <div class="about-card">
+              <div class="icon">🏗️</div>
+              <h4>Full Stack Builder</h4>
+              <p>Frontend to deployment</p>
+            </div>
+            <div class="about-card">
+              <div class="icon">🤖</div>
+              <h4>AI & LLM</h4>
+              <p>Gemini, Mistral, RAG, Whisper</p>
+            </div>
+            <div class="about-card">
+              <div class="icon">📦</div>
+              <h4>4+ Products</h4>
+              <p>Shipped & serving users</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-image-side reveal-right">
+          <div class="terminal">
+            <div class="terminal-header">
+              <span class="terminal-dot r"></span><span class="terminal-dot y"></span><span
+                class="terminal-dot g"></span>
+              <span class="terminal-title">mohan.json</span>
+            </div>
+            <div class="terminal-body">
+              <div><span class="t-bracket">{</span></div>
+              <div>&nbsp;&nbsp;<span class="t-key">"name"</span>: <span class="t-str">"Mohan Manjhi"</span>,</div>
+              <div>&nbsp;&nbsp;<span class="t-key">"role"</span>: <span class="t-str">"Full Stack Engineer"</span>,
+              </div>
+              <div>&nbsp;&nbsp;<span class="t-key">"company"</span>: <span class="t-str">"Vynorix Technologies"</span>,
+              </div>
+              <div>&nbsp;&nbsp;<span class="t-key">"location"</span>: <span class="t-str">"Indore, India"</span>,</div>
+              <div>&nbsp;&nbsp;<span class="t-key">"products"</span>: <span class="t-arr">[</span></div>
+              <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-str">"Token Care"</span>, <span class="t-str">"Ira Magic
+                  Tools"</span>,</div>
+              <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-str">"Yojna Saathi"</span>, <span
+                  class="t-str">"FoodieHub"</span></div>
+              <div>&nbsp;&nbsp;<span class="t-arr">]</span>,</div>
+              <div>&nbsp;&nbsp;<span class="t-key">"stack"</span>: <span class="t-arr">[</span></div>
+              <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-str">"Next.js"</span>, <span class="t-str">"React"</span>,
+                <span class="t-str">"PostgreSQL"</span>,
+              </div>
+              <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-str">"AWS"</span>, <span class="t-str">"Gemini AI"</span>,
+                <span class="t-str">"Docker"</span>
+              </div>
+              <div>&nbsp;&nbsp;<span class="t-arr">]</span>,</div>
+              <div>&nbsp;&nbsp;<span class="t-key">"motto"</span>: <span class="t-str">"Ship fast, learn faster"</span>
+              </div>
+              <div><span class="t-bracket">}</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">// tech stack</span>
+        <h2 class="section-title">Skills & <span class="gradient-text">Technologies</span></h2>
+        <p class="section-desc">The tools and technologies I use to bring ideas to production</p>
+      </div>
+      <div class="skills-wrapper stagger">
+        <div class="skills-category s-frontend">
+          <div class="skills-cat-head">
+            <div class="skills-cat-icon">⚛️</div>
+            <div>
+              <h3>Frontend Development</h3><span>UI/UX & Client Side</span>
+            </div>
+          </div>
+          <div class="skill-items">
+            <span class="skill-chip"><span class="dot-indicator"></span>React.js</span>
+            <span class="skill-chip"><span class="dot-indicator"></span>Next.js 14</span>
+            <span class="skill-chip"><span class="dot-indicator"></span>TypeScript</span>
+            <span class="skill-chip"><span class="dot-indicator"></span>Tailwind CSS</span>
+            <span class="skill-chip"><span class="dot-indicator"></span>JavaScript (ES6+)</span>
+            <span class="skill-chip"><span class="dot-indicator"></span>HTML5 / CSS3</span>
+          </div>
+        </div>
+        <div class="skills-category s-backend">
+          <div class="skills-cat-head">
+            <div class="skills-cat-icon">⚙️</div>
+            <div>
+              <h3>Backend & APIs</h3><span>Server Side & Auth</span>
+            </div>
+          </div>
+          <div class="skill-items">
+            <span class="skill-chip"><span class="dot-indicator"></span>Next.js API Routes</span>
+            <span class="skill-chip"><span class="dot-indicator"></span>REST APIs</span>
+            <span class="skill-chip"><span class="dot-indicator"></span>WebSockets</span>
+            <span class="skill-chip"><span class="dot-indicator"></span>Flask</span>
+            <span class="skill-chip"><span class="dot-indicator"></span>Authentication</span>
+            <span class="skill-chip"><span class="dot-indicator"></span>RBAC</span>
+          </div>
+        </div>
+        <div class="skills-category s-database">
+          <div class="skills-cat-head">
+            <div class="skills-cat-icon">🗄️</div>
+            <div>
+              <h3>Databases & ORM</h3><span>Data Layer</span>
+            </div>
+          </div>
+          <div class="skill-items">
+            <span class="skill-chip"><span class="dot-indicator"></span>PostgreSQL</span>
+            <span class="skill-chip"><span class="dot-indicator"></span>Prisma ORM</span>
+            <span class="skill-chip"><span class="dot-indicator"></span>MySQL</span>
+            <span class="skill-chip"><span class="dot-indicator"></span>SQL</span>
+          </div>
+        </div>
+        <div class="skills-category s-devops">
+          <div class="skills-cat-head">
+            <div class="skills-cat-icon">☁️</div>
+            <div>
+              <h3>DevOps & Cloud</h3><span>Infrastructure</span>
+            </div>
+          </div>
+          <div class="skill-items">
+            <span class="skill-chip"><span class="dot-indicator"></span>AWS EC2</span>
+            <span class="skill-chip"><span class="dot-indicator"></span>Docker</span>
+            <span class="skill-chip"><span class="dot-indicator"></span>GitHub Actions</span>
+            <span class="skill-chip"><span class="dot-indicator"></span>CI/CD</span>
+            <span class="skill-chip"><span class="dot-indicator"></span>Cloudflare Pages</span>
+          </div>
+        </div>
+        <div class="skills-category s-ai">
+          <div class="skills-cat-head">
+            <div class="skills-cat-icon">🧠</div>
+            <div>
+              <h3>AI / LLM</h3><span>Intelligence Layer</span>
+            </div>
+          </div>
+          <div class="skill-items">
+            <span class="skill-chip"><span class="dot-indicator"></span>Gemini API</span>
+            <span class="skill-chip"><span class="dot-indicator"></span>Mistral-7B</span>
+            <span class="skill-chip"><span class="dot-indicator"></span>OpenAI Whisper</span>
+            <span class="skill-chip"><span class="dot-indicator"></span>RAG Pipelines</span>
+            <span class="skill-chip"><span class="dot-indicator"></span>TensorFlow.js</span>
+          </div>
+        </div>
+        <div class="skills-category s-tools">
+          <div class="skills-cat-head">
+            <div class="skills-cat-icon">🛠️</div>
+            <div>
+              <h3>Tools & Languages</h3><span>Dev Environment</span>
+            </div>
+          </div>
+          <div class="skill-items">
+            <span class="skill-chip"><span class="dot-indicator"></span>Git / GitHub</span>
+            <span class="skill-chip"><span class="dot-indicator"></span>Postman</span>
+            <span class="skill-chip"><span class="dot-indicator"></span>Linux (Ubuntu)</span>
+            <span class="skill-chip"><span class="dot-indicator"></span>C++</span>
+            <span class="skill-chip"><span class="dot-indicator"></span>Java</span>
+            <span class="skill-chip"><span class="dot-indicator"></span>Python</span>
+            <span class="skill-chip"><span class="dot-indicator"></span>Bash</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">// experience</span>
+        <h2 class="section-title">Work <span class="gradient-text">Experience</span></h2>
+        <p class="section-desc">Building real products serving real users in production</p>
+      </div>
+      <div class="timeline reveal">
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <span class="tl-date">Nov 2025 — Present</span>
+          <div class="tl-card">
+            <h3>TokenCare — OPD Queue Management</h3>
+            <div class="role">Founder & Full Stack Engineer</div>
+            <div class="techs">
+              <span class="tech-pill">Next.js 14</span><span class="tech-pill">PostgreSQL</span>
+              <span class="tech-pill">Prisma ORM</span><span class="tech-pill">WebSockets</span>
+              <span class="tech-pill">Firebase FCM</span><span class="tech-pill">Razorpay</span><span
+                class="tech-pill">PWA</span>
+            </div>
+            <ul>
+              <li>Architected a multi-tenant OPD queue management system with role-based access (Patient, Doctor,
+                Receptionist, Admin)</li>
+              <li>Implemented real-time token state synchronization using WebSockets and push notifications for
+                low-latency updates</li>
+              <li>Built secure payment flows (Online, Cash, QR, Wallet) with transactional guarantees via Prisma</li>
+              <li>Delivered offline-first PWA experience and handled deployment, monitoring, and production reliability
+              </li>
+              <li>System actively used by clinics across India with real patients and doctors</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">// projects</span>
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+        <p class="section-desc">Products and systems I designed, built, and shipped end-to-end</p>
+      </div>
+
+      <!-- ===== 1. VYNORIX TECHNOLOGIES ===== -->
+      <div class="pj-showcase reveal" id="pj-vynorix">
+        <div class="pj-mockup">
+          <div class="browser-frame">
+            <div class="browser-bar">
+              <span class="br-dot r"></span><span class="br-dot y"></span><span class="br-dot g"></span>
+              <span class="br-url">vynorix.in</span>
+            </div>
+            <div class="browser-body browser-dark">
+              <div class="vynorix-logo-row"><span class="vy-icon">▶</span><span class="vy-brand">Vynorix
+                  Technologies</span></div>
+              <h4 class="mock-heading-light">Smart solutions that<br>simplify your daily life</h4>
+              <p class="mock-sub-light">Revolutionizing industries with intuitive, secure, and advanced software
+                technology.</p>
+              <div class="mock-products">
+                <div class="mock-product-card">
+                  <div class="mp-icon">🏥</div><strong>Token Care</strong>
+                  <p>Smart OPD Queue Management</p>
+                </div>
+                <div class="mock-product-card">
+                  <div class="mp-icon">🔧</div><strong>Ira Magic Tools</strong>
+                  <p>200+ Free Online Tools</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pj-info">
+          <span class="pj-badge">Our Company</span>
+          <h3 class="pj-title">Vynorix Technologies</h3>
+          <h4 class="pj-subtitle">Smart Solutions That Simplify Your Daily Life</h4>
+          <p class="pj-desc">The official company website showcasing our products, team, and vision. Features a modern
+            dark design, product landing pages with interactive mockups, founder profile, and company blog. Built with
+            Next.js and deployed on Cloudflare Pages.</p>
+          <ul class="pj-features">
+            <li><i data-lucide="check-circle" style="width:16px;height:16px"></i> Modern Dark Theme with Interactive UI
+            </li>
+            <li><i data-lucide="check-circle" style="width:16px;height:16px"></i> Product Showcase with Browser Mockups
+            </li>
+            <li><i data-lucide="check-circle" style="width:16px;height:16px"></i> SEO Optimized & Blazing Fast</li>
+            <li><i data-lucide="check-circle" style="width:16px;height:16px"></i> Founder Profile & Company Blog</li>
+          </ul>
+          <div class="pj-techs">
+            <span class="tech-pill">Next.js</span><span class="tech-pill">Tailwind CSS</span>
+            <span class="tech-pill">TypeScript</span><span class="tech-pill">Cloudflare Pages</span><span
+              class="tech-pill">SEO</span>
+          </div>
+          <div class="pj-actions">
+            <a href="https://vynorix.in/" target="_blank" rel="noopener" class="btn-glow">Visit Website <i
+                data-lucide="arrow-right" style="width:16px;height:16px"></i></a>
+            <div class="pj-tags">
+              <span class="pj-tag">Next.js</span>
+              <span class="pj-tag">Tailwind CSS</span>
+              <span class="pj-tag">Cloudflare</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== 2. TOKEN CARE ===== -->
+      <div class="pj-showcase pj-reverse reveal" id="pj-tokencare">
+        <div class="pj-info">
+          <span class="pj-badge badge-flagship">Our Flagship</span>
+          <h3 class="pj-title">Token Care</h3>
+          <h4 class="pj-subtitle">Smart OPD & Queue Management</h4>
+          <p class="pj-desc">Chaos in the waiting room is a thing of the past. Token Care simplifies outpatient
+            departments for clinics and hospitals by digitizing the queue system.</p>
+          <ul class="pj-features">
+            <li><i data-lucide="check-circle" style="width:16px;height:16px"></i> Reduces patient waiting time
+              significantly</li>
+            <li><i data-lucide="check-circle" style="width:16px;height:16px"></i> Organizes queues with simple digital
+              tokens</li>
+            <li><i data-lucide="check-circle" style="width:16px;height:16px"></i> Gives doctors a real-time patient flow
+              dashboard</li>
+            <li><i data-lucide="check-circle" style="width:16px;height:16px"></i> Improves patient satisfaction and calm
+            </li>
+          </ul>
+          <div class="pj-techs">
+            <span class="tech-pill">Next.js 14</span><span class="tech-pill">PostgreSQL</span>
+            <span class="tech-pill">Prisma ORM</span><span class="tech-pill">WebSockets</span>
+            <span class="tech-pill">PWA</span><span class="tech-pill">Razorpay</span>
+            <span class="tech-pill">AWS</span><span class="tech-pill">Neon Database</span><span
+              class="tech-pill">GitHub</span>
+          </div>
+          <div class="pj-actions">
+            <a href="https://tokencare.in/" target="_blank" rel="noopener" class="btn-glow">Visit Website <i
+                data-lucide="arrow-right" style="width:16px;height:16px"></i></a>
+            <div class="pj-tags">
+              <span class="pj-tag">Clinics / OPDs</span>
+              <span class="pj-tag">Small Hospitals</span>
+            </div>
+          </div>
+        </div>
+        <div class="pj-mockup">
+          <div class="browser-frame">
+            <div class="browser-bar">
+              <span class="br-dot r"></span><span class="br-dot y"></span><span class="br-dot g"></span>
+              <span class="br-url">tokencare.in</span>
+            </div>
+            <div class="browser-body">
+              <div class="tc-header"><strong>Dr. Sharma's Clinic</strong><span class="tc-live"><span
+                    class="live-dot"></span> LIVE</span></div>
+              <p class="tc-sub">Live OPD Status</p>
+              <div class="tc-stats-row">
+                <div class="tc-stat tc-stat-primary"><span class="tc-label">NOW SERVING</span><span
+                    class="tc-big">#A07</span></div>
+                <div class="tc-stat"><span class="tc-label">QUEUE SIZE</span><span class="tc-big">12</span></div>
+              </div>
+              <div class="tc-next">
+                <div class="tc-next-left"><span class="tc-num">08</span>
+                  <div><strong>Next Patient</strong><span class="tc-patient">Rajesh Kumar</span></div>
+                </div>
+                <span class="tc-call-btn">Call</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== 3. IRA MAGIC TOOLS ===== -->
+      <div class="pj-showcase reveal" id="pj-ira">
+        <div class="pj-mockup">
+          <div class="browser-frame">
+            <div class="browser-bar">
+              <span class="br-dot r"></span><span class="br-dot y"></span><span class="br-dot g"></span>
+              <span class="br-url">iramagictools.in</span>
+            </div>
+            <div class="browser-body">
+              <div class="ira-logo-row"><span class="ira-icon">✨</span>
+                <div><strong>Ira Magic Tools</strong><span class="ira-sub">All-in-One Digital Utilities</span></div>
+              </div>
+              <div class="ira-tools-grid">
+                <div class="ira-tool"><span class="ira-tool-icon">📄</span><span>PDF Tools</span></div>
+                <div class="ira-tool"><span class="ira-tool-icon">🖼️</span><span>Image Editor</span></div>
+                <div class="ira-tool"><span class="ira-tool-icon">💻</span><span>Dev Tools</span></div>
+                <div class="ira-tool"><span class="ira-tool-icon">🔄</span><span>Converters</span></div>
+              </div>
+              <div class="ira-cta">Explore 200+ Free Tools <i data-lucide="arrow-right"
+                  style="width:14px;height:14px"></i></div>
+            </div>
+          </div>
+        </div>
+        <div class="pj-info">
+          <span class="pj-badge badge-new">New Launch</span>
+          <h3 class="pj-title">Ira Magic Tools</h3>
+          <h4 class="pj-subtitle">Your All-in-One Digital Toolbox</h4>
+          <p class="pj-desc">A comprehensive web-based platform with over 200+ free online tools. Simplify digital
+            workflows for everyone—from students to enterprise professionals.</p>
+          <ul class="pj-features">
+            <li><i data-lucide="check-circle" style="width:16px;height:16px"></i> Complete Document & PDF Suite (Merge,
+              Split, Convert)</li>
+            <li><i data-lucide="check-circle" style="width:16px;height:16px"></i> Advanced Image Tools & Format
+              Conversion</li>
+            <li><i data-lucide="check-circle" style="width:16px;height:16px"></i> Developer Utilities (Formatters,
+              Encoders, SEO)</li>
+            <li><i data-lucide="check-circle" style="width:16px;height:16px"></i> AI-Powered Content Generation &
+              Analysis</li>
+          </ul>
+          <div class="pj-techs">
+            <span class="tech-pill">Next.js 14</span><span class="tech-pill">TypeScript</span>
+            <span class="tech-pill">WebAssembly</span><span class="tech-pill">Cloudflare Pages</span>
+          </div>
+          <div class="pj-actions">
+            <a href="https://www.iramagictools.in/" target="_blank" rel="noopener" class="btn-glow">Visit Website <i
+                data-lucide="arrow-right" style="width:16px;height:16px"></i></a>
+            <div class="pj-tags">
+              <span class="pj-tag">Students</span>
+              <span class="pj-tag">Freelancers</span>
+              <span class="pj-tag">Developers</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== 4. YOJNA SAATHI ===== -->
+      <div class="pj-showcase pj-reverse reveal" id="pj-yojna">
+        <div class="pj-info">
+          <span class="pj-badge badge-ai">🏆 Regional Hackathon Winner</span>
+          <h3 class="pj-title">Yojna Saathi</h3>
+          <h4 class="pj-subtitle">Multilingual Government Scheme Assistant</h4>
+          <p class="pj-desc">Voice-based AI assistant that helps citizens discover and apply for government schemes in
+            their native language. Won the Microsoft BhashaBandhu Regional Hackathon.</p>
+          <ul class="pj-features">
+            <li><i data-lucide="check-circle" style="width:16px;height:16px"></i> Hindi & Marathi Voice Input with
+              Whisper</li>
+            <li><i data-lucide="check-circle" style="width:16px;height:16px"></i> Fine-tuned Mistral-7B for Intent
+              Recognition</li>
+            <li><i data-lucide="check-circle" style="width:16px;height:16px"></i> RAG Pipeline over Govt Scheme
+              Documents</li>
+            <li><i data-lucide="check-circle" style="width:16px;height:16px"></i> Real-time Eligibility & Application
+              Status</li>
+          </ul>
+          <div class="pj-techs">
+            <span class="tech-pill">Mistral-7B</span><span class="tech-pill">OpenAI Whisper</span>
+            <span class="tech-pill">Gemini API</span><span class="tech-pill">RAG</span><span
+              class="tech-pill">React</span>
+          </div>
+          <div class="pj-actions">
+            <a href="https://github.com/MohanManjhi/YojnaSaathi" target="_blank" rel="noopener" class="btn-glow"><i
+                data-lucide="github" style="width:16px;height:16px"></i> Source Code <i data-lucide="arrow-right"
+                style="width:16px;height:16px"></i></a>
+            <div class="pj-tags">
+              <span class="pj-tag">AI / LLM</span>
+              <span class="pj-tag">Voice</span>
+              <span class="pj-tag">Govt Tech</span>
+            </div>
+          </div>
+        </div>
+        <div class="pj-mockup">
+          <div class="browser-frame">
+            <div class="browser-bar">
+              <span class="br-dot r"></span><span class="br-dot y"></span><span class="br-dot g"></span>
+              <span class="br-url">Yojna Saathi</span>
+            </div>
+            <div class="browser-body browser-dark">
+              <div class="ys-chat">
+                <div class="ys-msg ys-user">मुझे PM-Kisan योजना के बारे में जानकारी चाहिए।</div>
+                <div class="ys-msg ys-bot">
+                  <div class="ys-scheme-card">
+                    <strong>🏛️ PM-Kisan Samman Nidhi Yojana</strong>
+                    <p>किसानों को प्रति वर्ष ₹6000 की सहायता</p>
+                    <span class="ys-apply">Apply Now →</span>
+                  </div>
+                </div>
+              </div>
+              <div class="ys-input"><span>🎤</span><span class="ys-placeholder">Ask in Hindi, Marathi, English...</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== 5. AI SQL CHATBOT ===== -->
+      <div class="pj-showcase reveal" id="pj-sql">
+        <div class="pj-mockup">
+          <div class="browser-frame">
+            <div class="browser-bar">
+              <span class="br-dot r"></span><span class="br-dot y"></span><span class="br-dot g"></span>
+              <span class="br-url">AI SQL Chatbot</span>
+            </div>
+            <div class="browser-body browser-dark">
+              <div class="sql-chat">
+                <div class="sql-msg sql-user">Show revenue by product category for Q3</div>
+                <div class="sql-msg sql-bot">
+                  <code
+                    class="sql-code">SELECT Category, SUM(Revenue)<br>FROM Sales WHERE Quarter = 'Q3'<br>GROUP BY Category</code>
+                </div>
+              </div>
+              <div class="sql-chart">
+                <div class="sql-bar" style="height:85%"><span>Electronics</span></div>
+                <div class="sql-bar" style="height:65%"><span>Apparel</span></div>
+                <div class="sql-bar" style="height:55%"><span>Home</span></div>
+                <div class="sql-bar" style="height:40%"><span>Books</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pj-info">
+          <span class="pj-badge badge-ai">AI Project</span>
+          <h3 class="pj-title">AI SQL Chatbot</h3>
+          <h4 class="pj-subtitle">Natural Language to SQL Analytics</h4>
+          <p class="pj-desc">AI-powered chatbot that translates plain English into SQL queries and generates dynamic
+            data visualizations. Enables non-technical users to run analytics effortlessly.</p>
+          <ul class="pj-features">
+            <li><i data-lucide="check-circle" style="width:16px;height:16px"></i> Natural Language → SQL Translation
+            </li>
+            <li><i data-lucide="check-circle" style="width:16px;height:16px"></i> Auto-generated Charts & Visualizations
+            </li>
+            <li><i data-lucide="check-circle" style="width:16px;height:16px"></i> Gemini LLM with 20% Faster Response
+            </li>
+            <li><i data-lucide="check-circle" style="width:16px;height:16px"></i> Data Table Export (PDF, CSV)</li>
+          </ul>
+          <div class="pj-techs">
+            <span class="tech-pill">Flask</span><span class="tech-pill">React</span>
+            <span class="tech-pill">SQL</span><span class="tech-pill">Gemini LLM</span><span
+              class="tech-pill">Python</span>
+          </div>
+          <div class="pj-actions">
+            <a href="https://github.com/MohanManjhi/ai-powered-sql-chatbot" target="_blank" rel="noopener"
+              class="btn-glow"><i data-lucide="github" style="width:16px;height:16px"></i> Source Code <i
+                data-lucide="arrow-right" style="width:16px;height:16px"></i></a>
+            <div class="pj-tags">
+              <span class="pj-tag">Flask</span>
+              <span class="pj-tag">React</span>
+              <span class="pj-tag">Gemini LLM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GitHub Stats -->
+      <div class="github-stats-card reveal">
+        <h3>🐙 GitHub Activity</h3>
+        <p>Active open-source builder with consistent contributions</p>
+        <div class="github-stats-row">
+          <div class="gh-stat">
+            <div class="num">22</div>
+            <div class="lbl">Public Repos</div>
+          </div>
+          <div class="gh-stat">
+            <div class="num">7+</div>
+            <div class="lbl">Languages Used</div>
+          </div>
+          <div class="gh-stat">
+            <div class="num">3+</div>
+            <div class="lbl">Years Active</div>
+          </div>
+        </div>
+        <a href="https://github.com/MohanManjhi" target="_blank" rel="noopener" class="btn-outline"
+          style="margin-top:8px; display:inline-flex;">
+          <i data-lucide="github" style="width:16px;height:16px"></i> View Full GitHub Profile
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section" id="education">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">// education</span>
+        <h2 class="section-title">Academic <span class="gradient-text">Background</span></h2>
+      </div>
+      <div class="edu-grid stagger">
+        <div class="edu-card">
+          <div class="icon">🎓</div>
+          <h3>B.Tech in Computer Engineering</h3>
+          <div class="school">SGSITS, Indore</div>
+          <span class="detail">📅 Expected Graduation: 2026</span>
+          <span class="detail">📚 DSA, DBMS, OS, Computer Networks</span>
+        </div>
+        <div class="edu-card">
+          <div class="icon">📜</div>
+          <h3>Diploma in Computer Engineering</h3>
+          <div class="school">Govt. Polytechnic College, Raghogarh</div>
+          <span class="detail">📅 Graduated 2023</span>
+          <span class="cgpa-badge">CGPA: 9.11 / 10</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section class="section" id="achievements">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">// achievements</span>
+        <h2 class="section-title">Recognition & <span class="gradient-text">Awards</span></h2>
+      </div>
+      <div class="achv-grid stagger">
+        <div class="achv-card">
+          <div class="achv-icon">🏆</div>
+          <h3>Microsoft BhashaBandhu Hackathon RegionalWinner</h3>
+          <p>Built a multilingual solution recognized by Microsoft for innovation in Indian language technology</p>
+        </div>
+        <div class="achv-card">
+          <div class="achv-icon">💻</div>
+          <h3>400+ DSA Problems Solved</h3>
+          <p>Consistent problem solver on LeetCode, GeeksForGeeks, and Codeforces</p>
+        </div>
+        <div class="achv-card">
+          <div class="achv-icon">⭐</div>
+          <h3>Student of the Year</h3>
+          <p>Awarded during Diploma program for academic excellence and outstanding leadership</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESUME -->
+  <section class="resume-section" id="resume">
+    <div class="container">
+      <div class="resume-card reveal">
+        <h3>📄 Grab My Resume</h3>
+        <p>Get the full picture — experience, projects, skills, and more</p>
+        <a href="Mohan_Manjhi_Resume.pdf" download class="btn-glow" id="mainResumeBtn">
+          <i data-lucide="download" style="width:18px;height:18px"></i> Download Resume (PDF)
+        </a>
+        <div class="resume-counter">
+          <i data-lucide="users" style="width:14px;height:14px"></i>
+          <span class="cnt" id="mainCount">—</span> people have downloaded this resume
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">// get in touch</span>
+        <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+      </div>
+      <div class="contact-wrap reveal">
+        <p class="contact-intro">
+          I'm actively looking for <strong>full-time opportunities</strong> as a Full Stack Engineer. If you're a
+          recruiter, hiring manager, or just want to chat about tech — I'd love to hear from you! Let's build something
+          amazing together 🚀
+        </p>
+        <div class="contact-grid">
+          <a href="mailto:mohanmanjhi1315@gmail.com" class="contact-item">
+            <div class="contact-icon ci-email"><i data-lucide="mail" style="width:22px;height:22px"></i></div>
+            <span class="value">mohanmanjhi1315@gmail.com</span>
+          </a>
+          <a href="tel:+917879664973" class="contact-item">
+            <div class="contact-icon ci-phone"><i data-lucide="phone" style="width:22px;height:22px"></i></div>
+            <span class="value">+91 787-966-4973</span>
+          </a>
+          <a href="https://www.linkedin.com/in/mohan-manjhi/" target="_blank" rel="noopener" class="contact-item">
+            <div class="contact-icon ci-linkedin"><i data-lucide="linkedin" style="width:22px;height:22px"></i></div>
+            <span class="value">Mohan Manjhi</span>
+          </a>
+          <a href="https://github.com/MohanManjhi" target="_blank" rel="noopener" class="contact-item">
+            <div class="contact-icon ci-github"><i data-lucide="github" style="width:22px;height:22px"></i></div>
+            <span class="value">MohanManjhi</span>
+          </a>
+        </div>
+        <a href="mailto:mohanmanjhi1315@gmail.com" class="btn-glow"><i data-lucide="send"
+            style="width:18px;height:18px"></i> Send Me a Message</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-text">© 2026 Mohan Manjhi. Built with <span class="heart">❤️</span> & lots of ☕</p>
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/mohan-manjhi/" target="_blank" rel="noopener" aria-label="LinkedIn"><i
+              data-lucide="linkedin" style="width:14px;height:14px"></i></a>
+          <a href="https://github.com/MohanManjhi" target="_blank" rel="noopener" aria-label="GitHub"><i
+              data-lucide="github" style="width:14px;height:14px"></i></a>
+          <a href="https://vynorix.in/" target="_blank" rel="noopener" aria-label="Vynorix"><i data-lucide="globe"
+              style="width:14px;height:14px"></i></a>
+          <a href="mailto:mohanmanjhi1315@gmail.com" aria-label="Email"><i data-lucide="mail"
+              style="width:14px;height:14px"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
