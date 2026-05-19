@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
     new Typed('#typed-output', {
       strings: [
         'Full Stack Engineer',
-        'Founder &amp; CEO — Vynorix',
+        'Lead Engineer — Vynorix',
         'Building Products at Scale',
         'AI / LLM Enthusiast',
         'Microsoft Hackathon Winner',
